@@ -27,13 +27,16 @@ def calculate_values():
 
         # Calculate values
         total_revenue = price * quantity
+        marginal_revenue = total_revenue / quantity
         total_cost = (wage * labor) + (rent * capital)
         average_cost = total_cost / quantity
         profit = total_revenue - total_cost
 
+
         # Store output values
         outputs.append({
             "total_revenue": total_revenue,
+            "marginal_revenue": marginal_revenue,
             "total_cost": total_cost,
             "average_cost": average_cost,
             "profit": profit
@@ -41,6 +44,7 @@ def calculate_values():
 
         # Update labels
         total_revenue_label.config(text=f"The total revenue is ${total_revenue}")
+        marginal_revenue_label.config(text=f"The marginal revenue is ${marginal_revenue}")
         total_cost_label.config(text=f"The total cost is ${total_cost}")
         average_cost_label.config(text=f"Average cost is ${average_cost}")
         profit_label.config(text=f"Profit is ${profit}")
@@ -75,6 +79,9 @@ calculate_button.pack()
 # Labels to display calculated values or errors
 total_revenue_label = tk.Label(window, text="", fg = "red")
 total_revenue_label.pack()
+
+marginal_revenue_label = tk.Label(window, text="", fg = "purple" )
+marginal_revenue_label.pack()
 
 total_cost_label = tk.Label(window, text="", fg = "green")
 total_cost_label.pack()
