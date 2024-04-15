@@ -73,7 +73,7 @@ calculate_button = tk.Button(window, text="Calculate", command=calculate_values)
 calculate_button.pack()
 
 # Labels to display calculated values or errors
-total_revenue_label = tk.Label(window, text="", fg = "blue")
+total_revenue_label = tk.Label(window, text="", fg = "red")
 total_revenue_label.pack()
 
 total_cost_label = tk.Label(window, text="", fg = "green")
@@ -82,7 +82,7 @@ total_cost_label.pack()
 average_cost_label = tk.Label(window, text="", fg = "yellow")
 average_cost_label.pack()
 
-profit_label = tk.Label(window, text="")
+profit_label = tk.Label(window, text="" , fg = "green")
 profit_label.pack()
 
 error_label = tk.Label(window, text="", fg="red")
